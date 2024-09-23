@@ -91,17 +91,35 @@ Estamos buscando uma análise aprofundada dos fatores que afetam os preços dos 
 
 ### Análise do Dataset 
 
-O Primeiro passo é identificar e entendeder os dados que estamos trabalhando. ![dataset](img/image%20copy%2019.png)
+O Primeiro passo é identificar e entendeder os dados que estamos trabalhando.
 
-Para responder a primeira solicitação, preciso entender como é a distribuição de preços de apartamentos em todo o dataset. ![boxplot1](img/image.png)
+ ![dataset](img/image%20copy%2019.png)
 
-Aqui podemos observar que existem muitos outliers no dataset, isso em si já vai ser uma informação importante futuramente mas no momento quero descobrir a distribuição dos quartis, então vou diminuir esses outliers. ![boxplot2](img/image%20copy.png)
+Para responder a primeira solicitação, preciso entender como é a distribuição de preços de apartamentos em todo o dataset.
+
+ ![boxplot1](img/image.png)
+
+Aqui podemos observar que existem muitos outliers no dataset, isso em si já vai ser uma informação importante futuramente mas no momento quero descobrir a distribuição dos quartis, então vou diminuir esses outliers. 
+
+![boxplot2](img/image%20copy.png)
 
 Como pedido, faço uma contagem no dataset e descubro que as três cidades com mais apartamentos são: Dallas, Denver e Los Angeles.
 
-Bom, primeiro quero apenas observar graficamente a distribuição de preços de acordo com o tamanho dos apartamentos. Faço isso para as três cidades. ![grafico](img/image%20copy%203.png) ![grafico](img/image%20copy%204.png) ![grafico](img/image%20copy%202.png)
+Bom, primeiro quero apenas observar graficamente a distribuição de preços de acordo com o tamanho dos apartamentos. Faço isso para as três cidades. 
 
-Após isso, penso em utilizar uma Regressão Linear para identificar mais precisamente a relação dessas variáveis. ![grafico](img/image%20copy%205.png) ![grafico](img/image%20copy%206.png) ![grafico](img/image%20copy%207.png)
+![grafico](img/image%20copy%203.png) 
+
+![grafico](img/image%20copy%204.png) 
+
+![grafico](img/image%20copy%202.png)
+
+Após isso, penso em utilizar uma Regressão Linear para identificar mais precisamente a relação dessas variáveis. 
+
+![grafico](img/image%20copy%205.png) 
+
+![grafico](img/image%20copy%206.png) 
+
+![grafico](img/image%20copy%207.png)
 
 Através da função de custo percebo um grande erro na predição, mas isso ja era esperando tendo em conta a grande quantidade de outliers, a ideia era identificar alguma relação entre tamanho e valor e é possivel perceber que sim, há uma relação, porém existem outros fatores que podem se mostrar mais influentes, vamos continuar!
 
@@ -113,17 +131,23 @@ Obs: Para essa análise, coloquei dois tipos de marcadores:
    - `Azul`: Preços acima do preço médio dos apartamentos da cidade
    - `Vermelho`: Preços abaixo do preço médio dos apartamentos da cidade
 
-Em Dallas, podemos observar que os apartamentos da zona sul e zona leste da cidade estão abaixo da média de preço, enquanto apartamentos do centro da cidade e alguns da zona norte estão acimda da média de preço. ![grafico](img/image%20copy%208.png)
+Em Dallas, podemos observar que os apartamentos da zona sul e zona leste da cidade estão abaixo da média de preço, enquanto apartamentos do centro da cidade e alguns da zona norte estão acimda da média de preço. 
+
+![grafico](img/image%20copy%208.png)
 
 
 ### Denver 
 
-Em Denver, podemos observar que os apartamentos da zona norte e zona oeste da cidade estão abaixo da média de preço, enquanto apartamentos do centro da cidade e alguns da zona sul e leste estão acimda da média de preço. ![grafico](img/image%20copy%209.png)
+Em Denver, podemos observar que os apartamentos da zona norte e zona oeste da cidade estão abaixo da média de preço, enquanto apartamentos do centro da cidade e alguns da zona sul e leste estão acimda da média de preço. 
+
+![grafico](img/image%20copy%209.png)
 
 
 ### Los Angeles
 
-Fugindo do padrão, a concentração de apartamentos com o preço acima da média se encontra ao oeste da cidade, tendo alguns outros se encontrando no centro da cidade. ![grafico](img/image%20copy%2010.png)
+Fugindo do padrão, a concentração de apartamentos com o preço acima da média se encontra ao oeste da cidade, tendo alguns outros se encontrando no centro da cidade. 
+
+![grafico](img/image%20copy%2010.png)
 
 
 **Conclusões**
@@ -141,7 +165,9 @@ Passando para a próxima demanda, queremos descobrir agora quais fatores mais im
 
 `obs`: Para fazer esse treinamento foi necessário categorizar os preços em três catergorias.
 
-Feito o treinamento e com uma acurácia alta, podemos verificar quais são as features que mais impactam no preço. ![grafico](img/image%20copy%2012.png)
+Feito o treinamento e com uma acurácia alta, podemos verificar quais são as features que mais impactam no preço. 
+
+![grafico](img/image%20copy%2012.png)
 
 
 **Conclusões**
@@ -149,11 +175,16 @@ Feito o treinamento e com uma acurácia alta, podemos verificar quais são as fe
 
 
 
-Agora vamos identificar os padrões desses imovés e separalos em clusters. ![grafico](img/image%20copy%2013.png)
+Agora vamos identificar os padrões desses imovés e separalos em clusters. 
+
+![grafico](img/image%20copy%2013.png)
 
 ### Padrões
 
 ![grafico](img/image%20copy%2015.png)
+
 ![grafico](img/image%20copy%2016.png)
+
 ![grafico](img/image%20copy%2017.png)
+
 ![grafico](img/image%20copy%2018.png)
