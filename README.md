@@ -1,47 +1,81 @@
-### Minimundo: Imobiliária Alpha
+**Projeto de Data Science: Análise de Imóveis para Aluguel nos Estados Unidos**
 
-A Imobiliária Alpha é uma empresa especializada em aluguéis de apartamentos em grandes cidades, operando principalmente no mercado de capitais como São Paulo, Rio de Janeiro, e Belo Horizonte. A empresa conta com uma vasta carteira de imóveis para locação, atendendo desde pequenas unidades como estúdios e apartamentos de um quarto, até lofts e coberturas de luxo.
+Descrição do Projeto
+Este projeto tem como objetivo analisar imóveis para aluguel nos Estados Unidos, com foco na identificação das comodidades mais relevantes para o preço e localização de maior valor. Através de técnicas de Machine Learning, segmentação de mercado e análise de padrões, foi possível gerar insights valiosos sobre o comportamento do mercado imobiliário.
 
-A Alpha está interessada em otimizar sua estratégia de precificação, entender melhor o comportamento de seus clientes e melhorar o tempo de locação de seus imóveis. Para isso, eles decidiram utilizar um dataset robusto que inclui diversas características dos apartamentos disponíveis para aluguel. Essas informações são essenciais para analisar o mercado de locação, prever tendências, e identificar oportunidades de crescimento.
+### Principais Ferramentas Utilizadas
+- **Linguagem**: Python
+- **Bibliotecas**:
+  - `Pandas`: Para manipulação e análise de dados estruturados.
+  - `NumPy`: Para operações matemáticas.
+  - `Matplotlib` e `Seaborn`: Para visualização gráfica de dados.
+  - `Scikit-learn`: Para modelagem estatística, regressão e análise preditiva.
 
-Os dados dos imóveis incluem identificadores únicos, localização geográfica (endereço, cidade, estado, latitude e longitude), detalhes dos imóveis (tamanho em metros quadrados, número de quartos e banheiros, descrição do apartamento e categoria), informações sobre o preço (preço do aluguel, taxa de exibição, e tipo de preço), além de detalhes adicionais como a presença de fotos, permissão para animais de estimação e a moeda do aluguel.
+### Descrição do Projeto
+O objetivo principal deste projeto é analisar o mercado de aluguéis de apartamentos para a empresa fictícia Liberty Apartments. O foco está em identificar os fatores que influenciam o preço dos aluguéis em três cidades principais nos EUA. A análise foi estruturada para responder a cinco questões fundamentais levantadas pela empresa.
 
-A empresa agora busca apoio de seu cientista de dados para analisar esse vasto conjunto de informações e responder a perguntas que irão impactar suas decisões estratégicas, operacionais e de marketing.
+### Objetivos da Análise
+1. **Relação entre preço e tamanho do apartamento**:
+   - Foi realizado um estudo de correlação e análise de regressão linear entre a metragem quadrada e o preço de aluguel em cada cidade, com o objetivo de identificar padrões entre as localidades.
+   
+2. **Impacto da localização no preço**:
+   - O dataset inclui dados geográficos que foram utilizados para segmentar as cidades em bairros ou áreas, permitindo um estudo da variação dos preços de aluguel com base na localização.
 
----
+3. **Análise de amenidades**:
+   - Uma análise foi conduzida para identificar quais amenidades, como estacionamento, academia, varanda, etc., mais influenciam no valor do aluguel em cada cidade.
 
-### Perguntas de Negócios:
+4. **Principais fatores determinantes do preço**:
+   - Usando técnicas de análise multivariada e regressão, foi identificada a influência de múltiplos fatores, como localização, metragem e amenidades, sobre o preço final do aluguel.
 
-1. **Qual é o preço médio de aluguel por cidade e como isso varia de acordo com o tamanho (metros quadrados) dos apartamentos?**
-   *O objetivo é entender como o mercado de locação se comporta em diferentes cidades e como o tamanho do imóvel influencia o valor do aluguel.*
+5. **Segmentação do mercado**:
+   - Clusters de imóveis foram identificados com base em características similares, permitindo segmentar o mercado em diferentes grupos.
 
-2. **Existem padrões geográficos que indicam áreas com maior demanda ou valores de aluguel mais altos?**
-   *A imobiliária quer identificar regiões geográficas onde a demanda por apartamentos ou o valor dos aluguéis é mais alto, para direcionar melhor os investimentos.*
+### Análises Realizadas
+- **Análise descritiva**:
+  - Um resumo estatístico dos dados foi gerado, incluindo a média, mediana e dispersão dos preços de aluguel.
+  
+- **Visualização de dados**:
+  - Gráficos de dispersão e boxplots foram utilizados para explorar a distribuição dos preços, a correlação com o tamanho dos imóveis e a distribuição geográfica dos preços dentro de cada cidade.
+  
+- **Modelagem preditiva**:
+  - Modelos de regressão linear foram implementados para prever o preço dos imóveis com base nas variáveis explicativas, como localização, tamanho e amenidades.
+  
+- **Clusterização**:
+  - Técnicas de agrupamento foram utilizadas para identificar grupos homogêneos de apartamentos com base em suas características e valores de aluguel.
 
-3. **Quais amenidades têm maior impacto no preço de aluguel?**
-   *A empresa deseja saber se características como número de quartos, banheiros, ou presença de varandas e outros serviços afetam significativamente o valor do imóvel.*
+### Como Reproduzir o Projeto
+1. Clone o repositório.
+   ```bash
+   git clone https://github.com/seu_repositorio/projeto-liberty-apartments.git
+   ```
+   
+2. Instale as dependências.
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4. **Como a presença de fotos ou permissão para animais de estimação afeta a taxa de ocupação e o valor dos aluguéis?**
-   *Entender se anúncios com fotos ou que aceitam pets têm maior probabilidade de serem alugados rapidamente ou se esses fatores influenciam o preço.*
+3. Execute o Jupyter Notebook para visualizar as análises.
+   ```bash
+   jupyter notebook 10k.ipynb
+   ```
 
-5. **Existe uma correlação entre a idade do anúncio e a probabilidade de aluguel ou flutuação no preço?**
-   *A imobiliária quer saber se, à medida que o anúncio permanece por mais tempo ativo, há uma queda no valor do aluguel ou uma menor chance de ser alugado.*
+### Insights Relevantes
+- **Correlação entre tamanho e preço**: A metragem do imóvel é o fator que mais impacta o preço do aluguel em todas as cidades. No entanto, a elasticidade do preço em relação ao tamanho varia entre as cidades.
+  
+- **Impacto da localização**: Certas áreas das cidades têm aluguéis significativamente mais altos devido à proximidade com centros comerciais e áreas valorizadas. Essas informações podem ser usadas para ajustar as estratégias de marketing e precificação.
 
-6. **Quais características definem os apartamentos que permanecem mais tempo listados sem serem alugados?**
-   *Identificar padrões nos imóveis que demoram mais para serem alugados, como localização, preço ou características do apartamento, para ajustar sua estratégia de marketing ou preço.*
+- **Amenidades valorizadas**: O impacto das amenidades no preço varia entre as cidades. Em algumas localidades, a presença de uma academia e estacionamento aumenta significativamente o valor do aluguel, enquanto em outras a demanda por varandas é maior.
 
-7. **Como os preços de aluguel variam entre apartamentos de diferentes categorias (ex: estúdio, loft, cobertura)?**
-   *A empresa quer entender se há uma diferença significativa nos preços entre diferentes tipos de imóveis e como esses preços flutuam no mercado.*
+### Estrutura do Repositório
+```
+/projeto-liberty-apartments
+│
+├── data/                # Diretório com os dados brutos
+├── notebooks/           # Jupyter notebooks com as análises
+├── src/                 # Scripts auxiliares
+├── README.md            # Este arquivo
+├── requirements.txt     # Dependências do projeto
+└── LICENSE              # Licença do projeto
+```
 
-8. **É possível identificar clusters de apartamentos com características semelhantes para criar estratégias de marketing direcionadas?**
-   *A imobiliária quer agrupar apartamentos com características semelhantes para campanhas de marketing mais eficazes, segmentadas por preço, tipo de imóvel ou localização.*
-
-9. **A partir dos dados históricos, quais fatores melhor preveem o aumento ou diminuição dos preços de aluguel ao longo do tempo?**
-   *A Alpha busca prever tendências futuras de preços de aluguel, observando dados históricos e identificando fatores como inflação, demanda, ou sazonalidade que podem influenciar os preços.*
-
-10. **Quais cidades ou bairros estão experimentando maior crescimento de preço e quais apresentam potencial de crescimento futuro?**
-    *A imobiliária quer identificar áreas promissoras onde os preços de aluguel estão subindo ou têm potencial de crescimento, para investir mais em propriedades nessas regiões.*
-
----
-
-Com essas perguntas respondidas, a Imobiliária Alpha espera aumentar sua competitividade no mercado, otimizar suas operações e tomar decisões estratégicas informadas, maximizando seu retorno financeiro e melhorando a experiência de seus clientes.
+Esse README é um guia completo para o projeto de análise dos aluguéis da Liberty Apartments, fornecendo uma visão geral do projeto, ferramentas utilizadas, insights obtidos e instruções para execução.
